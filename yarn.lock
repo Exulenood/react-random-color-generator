@@ -7797,6 +7797,11 @@ raw-body@2.5.1:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
+rcolor@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/rcolor/-/rcolor-2.0.2.tgz#3682dc4dabbddf56c64e2a90c7efbbffea26655c"
+  integrity sha512-ab4PQzDixDbBhW7GNzia8uF+1v7eUuOHM6dGYTwMkvR2eNXdqsbDaYNNml4U7U31595u7Au5NQuTVSi/FNRBfA==
+
 react-app-polyfill@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/react-app-polyfill/-/react-app-polyfill-3.0.0.tgz#95221e0a9bd259e5ca6b177c7bb1cb6768f68fd7"
