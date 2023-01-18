@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import generateColor from './generateColor';
-
-// import Testconainer from './testContainer';
+import Testconainer from './testContainer';
 
 export default function App() {
   const [genColor, setGenColor] = useState(); // Main Stat to pass the effective HexCode for the Color
@@ -10,7 +9,7 @@ export default function App() {
   const [luminosity, setLuminosity] = useState('standard'); // Stat to pass the Lightness standard/light/dark selected from the radio Buttons named "conRange" to generateColor.js
   // #########  STAT TEST RANGE START ##############
 
-  // const [valueA, setValueA] = useState(40);
+  const [valueA, setValueA] = useState('Test');
   // const [valueB, setValueB] = useState(1000);
   // const [valueC, setValueC] = useState(2);
   // const [valueD, setValueD] = useState(0);
@@ -21,7 +20,7 @@ export default function App() {
     <div>
       <h1>RANDOM COLOR GENERATOR</h1>
       <div>
-        {/* <Testconainer exec={luminosity} /> */}
+        <Testconainer valueA={valueA} valAUpdate={setValueA} />
         Hue Options:
         <br />
         <input
@@ -57,20 +56,20 @@ export default function App() {
         />
         blue
         <br />
-        <div>
-          Hue Spread:
-          {'   '}
-          <input
-            type="range"
-            min="20"
-            max="120"
-            step="1"
-            defaultValue="60"
-            onChange={(spread) => setHueSpread(spread.target.value)}
-          />
-          {'   '}
-          {hueSpread} degrees
-        </div>
+      </div>
+      <div>
+        Hue Spread:
+        {'   '}
+        <input
+          type="range"
+          min="20"
+          max="120"
+          step="1"
+          defaultValue="60"
+          onChange={(spread) => setHueSpread(spread.target.value)}
+        />
+        {'   '}
+        {hueSpread} degrees
       </div>
 
       <div>
@@ -110,9 +109,7 @@ export default function App() {
         Generate
       </button>
       <br />
-      {console.log(hueRange)}
-      {console.log(hueSpread)}
-      {console.log(luminosity)}
+      {console.log(valueA)}
       <div>Color: {genColor}</div>
     </div>
   );
