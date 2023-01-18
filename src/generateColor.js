@@ -21,7 +21,7 @@ function effectiveHueFactor(hueRange, spreadToFraction) {
 
 function effectiveSatFactor(luminosity) {
   if (luminosity === 'light') {
-    return 1 / 2 - (Math.random() * 1) / 3;
+    return 1 / 2 - Math.random() * (1 / 3);
   } else {
     return 1;
   }
@@ -29,7 +29,7 @@ function effectiveSatFactor(luminosity) {
 
 function effectiveConFactor(luminosity) {
   if (luminosity === 'dark') {
-    return 1 / 2 - (Math.random() * 1) / 3;
+    return 3 / 4 - Math.random() * (1 / 3);
   } else {
     return 1;
   }
@@ -43,3 +43,13 @@ export default function generateColor(hueRange, hueSpread, luminosity) {
     value: effectiveConFactor(luminosity),
   });
 }
+
+// Original Library Configuration
+
+// const goldenRatio = 0.618 // ... truncated
+
+// rcolor({
+//   hue: (Math.random() + goldenRatio) % 1,
+//   saturation: 0.5,
+//   value: 0.95
+// })
