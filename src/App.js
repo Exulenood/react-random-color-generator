@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import ColorDisplay from './colorDisplay';
-import generateColor from './generateColor';
-import HueRange from './hueRange';
-import HueSpread from './hueSpread';
-import LumiOptions from './lumiOptions';
+import ColorDisplay from './components/colorDisplay';
+import generateColor from './components/generateColor';
+import HueRange from './components/hueRange';
+import HueSpread from './components/hueSpread';
+import LumiOptions from './components/lumiOptions';
 
 export default function App() {
   const [genColor, setGenColor] = useState();
