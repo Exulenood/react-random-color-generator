@@ -1,3 +1,5 @@
+import ShowHueExpl from './showHueExpl';
+
 export default function HueSpread(props) {
   if (props.hueRange !== 'wholeRange') {
     return (
@@ -13,6 +15,7 @@ export default function HueSpread(props) {
         />
         {'   '}
         {props.hueSpread} degrees
+        <ShowHueExpl hueRange={props.hueRange} />
       </div>
     );
   }

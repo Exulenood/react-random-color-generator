@@ -6,10 +6,10 @@ import HueSpread from './components/hueSpread';
 import LumiOptions from './components/lumiOptions';
 
 export default function App() {
-  const [genColor, setGenColor] = useState();
   const [hueRange, setHueRange] = useState('wholeRange');
   const [hueSpread, setHueSpread] = useState(70);
   const [luminosity, setLuminosity] = useState('standard');
+  const [genColor, setGenColor] = useState();
 
   return (
     <div>
